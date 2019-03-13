@@ -15,6 +15,9 @@ CalcEngine::Rational CCalcEngine::DoOperation(int operation, CalcEngine::Rationa
 
     try
     {
+        uint32_t n1 = lhs.P().Mantissa().front();
+        uint32_t n2 = rhs.P().Mantissa().front();
+
         switch (operation)
         {
         case IDC_AND:
@@ -64,6 +67,9 @@ CalcEngine::Rational CCalcEngine::DoOperation(int operation, CalcEngine::Rationa
             break;
 
         case IDC_ADD:
+            if (n1 == 0 || n2 == 0 || (n1 == 1 && n2 == 1)) {
+                throw CALC_E_AREYOUSERIOUS;
+            }
             result += rhs;
             break;
 

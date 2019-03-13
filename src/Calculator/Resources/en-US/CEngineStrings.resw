@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -416,5 +416,20 @@
   <data name="99" xml:space="preserve">
     <value>Cannot divide by zero</value>
     <comment>Error string shown when a divide by zero condition happens during the calculation</comment>
+  </data>
+  <data name="121" xml:space="preserve">
+    <value>I still cannot divide by 0</value>
+  </data>
+  <data name="122" xml:space="preserve">
+    <value>Repeatedly trying won't change this!</value>
+  </data>
+  <data name="123" xml:space="preserve">
+    <value>Stop already! You're scaring the ALU.</value>
+  </data>
+  <data name="124" xml:space="preserve">
+    <value>Alright, do whatever you want.</value>
+  </data>
+  <data name="125" xml:space="preserve">
+    <value>You're not serious, right?</value>
   </data>
 </root>

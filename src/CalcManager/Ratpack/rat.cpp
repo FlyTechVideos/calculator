@@ -21,6 +21,8 @@
 
 using namespace std;
 
+int err_count = 0;
+
 //-----------------------------------------------------------------------------
 //
 //    FUNCTION: gcdrat
@@ -148,7 +150,20 @@ void divrat( PRAT *pa, PRAT b, int32_t precision)
         if ( zernum( (*pa)->pq ) )
             {
             // raise an exception if the bottom is 0.
-            throw( CALC_E_DIVIDEBYZERO );
+                err_count++;
+
+                switch (err_count) {
+                    case 3:
+                        throw (CALC_E_DIVIDEBYZERO_EE1);
+                    case 4:
+                        throw (CALC_E_DIVIDEBYZERO_EE2);
+                    case 5:
+                        throw (CALC_E_DIVIDEBYZERO_EE3);
+                    case 6:
+                        throw (CALC_E_DIVIDEBYZERO_EE4);
+                    default:
+                        throw( CALC_E_DIVIDEBYZERO );
+                }
             }
         trimit(pa, precision);
         }

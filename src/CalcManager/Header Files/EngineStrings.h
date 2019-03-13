@@ -77,20 +77,30 @@
 #define IDS_NORESULT            IDS_ERRORS_FIRST+9
 #define IDS_INSUFFICIENT_DATA   IDS_ERRORS_FIRST+10
 
-#define CSTRINGSENGMAX       IDS_INSUFFICIENT_DATA+1
+#define CSTRINGSENGMAX_OLD       IDS_INSUFFICIENT_DATA+1
 
 // Arithmetic expression evaluator error strings
-#define IDS_ERR_UNK_CH           CSTRINGSENGMAX+1
-#define IDS_ERR_UNK_FN           CSTRINGSENGMAX+2
-#define IDS_ERR_UNEX_NUM         CSTRINGSENGMAX+3
-#define IDS_ERR_UNEX_CH          CSTRINGSENGMAX+4
-#define IDS_ERR_UNEX_SZ          CSTRINGSENGMAX+5
-#define IDS_ERR_MISMATCH_CLOSE   CSTRINGSENGMAX+6
-#define IDS_ERR_UNEX_END         CSTRINGSENGMAX+7
-#define IDS_ERR_SG_INV_ERROR     CSTRINGSENGMAX+8
-#define IDS_ERR_INPUT_OVERFLOW   CSTRINGSENGMAX+9
-#define IDS_ERR_OUTPUT_OVERFLOW  CSTRINGSENGMAX+10
+#define IDS_ERR_UNK_CH           CSTRINGSENGMAX_OLD+1
+#define IDS_ERR_UNK_FN           CSTRINGSENGMAX_OLD+2
+#define IDS_ERR_UNEX_NUM         CSTRINGSENGMAX_OLD+3
+#define IDS_ERR_UNEX_CH          CSTRINGSENGMAX_OLD+4
+#define IDS_ERR_UNEX_SZ          CSTRINGSENGMAX_OLD+5
+#define IDS_ERR_MISMATCH_CLOSE   CSTRINGSENGMAX_OLD+6
+#define IDS_ERR_UNEX_END         CSTRINGSENGMAX_OLD+7
+#define IDS_ERR_SG_INV_ERROR     CSTRINGSENGMAX_OLD+8
+#define IDS_ERR_INPUT_OVERFLOW   CSTRINGSENGMAX_OLD+9
+#define IDS_ERR_OUTPUT_OVERFLOW  CSTRINGSENGMAX_OLD+10
 
+#define IDS_EE            IDS_ERR_OUTPUT_OVERFLOW+1
+
+#define IDS_DIVBYZERO_EE1 IDS_EE
+#define IDS_DIVBYZERO_EE2 IDS_EE+1
+#define IDS_DIVBYZERO_EE3 IDS_EE+2
+#define IDS_DIVBYZERO_EE4 IDS_EE+3
+
+#define IDS_AREYOUSERIOUS IDS_EE+4
+
+#define CSTRINGSENGMAX IDS_EE+4
 
 #define SIDS_PLUS_MINUS L"0"
 #define SIDS_CLEAR L"1"
@@ -213,6 +223,11 @@
 #define SIDS_ERR_SG_INV_ERROR L"118"
 #define SIDS_ERR_INPUT_OVERFLOW L"119"
 #define SIDS_ERR_OUTPUT_OVERFLOW L"120"
+#define SIDS_DIVIDEBYZERO_EE1 L"121"
+#define SIDS_DIVIDEBYZERO_EE2 L"122"
+#define SIDS_DIVIDEBYZERO_EE3 L"123"
+#define SIDS_DIVIDEBYZERO_EE4 L"124"
+#define SIDS_AREYOUSERIOUS L"125"
 
 __declspec(selectany) std::wstring g_sids[] = 
 {
@@ -252,7 +267,7 @@ __declspec(selectany) std::wstring g_sids[] =
     std::wstring(SIDS_NFACTORIAL),
     std::wstring(SIDS_RECIPROCAL),
     std::wstring(SIDS_DMS),
-    std::wstring(SIDS_CUBEROOT),    
+    std::wstring(SIDS_CUBEROOT),
     std::wstring(SIDS_POWTEN),
     std::wstring(SIDS_PERCENT),
     std::wstring(SIDS_SCIENTIFIC_NOTATION),
@@ -324,7 +339,7 @@ __declspec(selectany) std::wstring g_sids[] =
     std::wstring(SIDS_NOMEM),
     std::wstring(SIDS_TOOMANY),
     std::wstring(SIDS_OVERFLOW),
-    std::wstring(SIDS_NORESULT), 
+    std::wstring(SIDS_NORESULT),
     std::wstring(SIDS_INSUFFICIENT_DATA),
     std::wstring(SIDS_ERR_UNK_CH),
     std::wstring(SIDS_ERR_UNK_FN),
@@ -335,5 +350,10 @@ __declspec(selectany) std::wstring g_sids[] =
     std::wstring(SIDS_ERR_UNEX_END),
     std::wstring(SIDS_ERR_SG_INV_ERROR),
     std::wstring(SIDS_ERR_INPUT_OVERFLOW),
-    std::wstring(SIDS_ERR_OUTPUT_OVERFLOW)
+    std::wstring(SIDS_ERR_OUTPUT_OVERFLOW),
+    std::wstring(SIDS_DIVIDEBYZERO_EE1),
+    std::wstring(SIDS_DIVIDEBYZERO_EE2),
+    std::wstring(SIDS_DIVIDEBYZERO_EE3),
+    std::wstring(SIDS_DIVIDEBYZERO_EE4),
+    std::wstring(SIDS_AREYOUSERIOUS)
 };
