@@ -1,6 +1,6 @@
 # Calculator
 
-> Note from FlyTech: This repository is not maintained in any way. It was forked on 2019-03-13 at 20:18 UTC and only contains added "easter egg" error strings.
+> Note from FlyTech: This repository is not maintained in any way. It was forked on 2019-03-13 at 20:18 UTC and only contains added "easter egg" error strings. You can see a demo of the easter eggs and the code here: https://www.youtube.com/watch?v=o9nELzt9erM
 
 The Windows Calculator app is a modern Windows app written in C++ that ships pre-installed with Windows.
 The app provides standard, scientific, and programmer calculator functionality, as well as a set of converters between various units of measurement and currencies.
